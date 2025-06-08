@@ -1,15 +1,14 @@
-# 🆔 CNIC Parser
+# CNIC Parser
 
 <div align="center">
 
-![CNIC Parser Logo](./src/assets/5265347.png)
+![CNIC Parser Logo](./frontend/src/assets/5265347.png)
 
 **Advanced OCR-powered Pakistani CNIC Information Extraction System**
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
 [![React](https://img.shields.io/badge/React-18.0+-61DAFB.svg)](https://reactjs.org)
 [![Flask](https://img.shields.io/badge/Flask-2.0+-000000.svg)](https://flask.palletsprojects.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 [Demo](#demo) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [API](#api) • [Contributing](#contributing)
 
@@ -81,15 +80,15 @@ Manual data entry from identity documents is time-consuming, error-prone and ine
 ## 📸 Visuals
 
 ### Dashboard Overview and Upload Interface
-![Dashboard Screenshot](./docs/images/dashboard.png)
+![Dashboard Screenshot](./docs/dashboard.png)
 *Clean, intuitive interface for CNIC upload, validation and processing*
 
 ### Extraction Results
-![Extraction Results](./docs/images/extraction_results.png)
+![Extraction Results](./docs/extraction_results.png)
 *Detailed information extraction with confidence metrics*
 
 ### Annotated Image Analysis
-![Annotated Image](./docs/images/annotated_image.png)
+![Annotated Image](./docs/annotated_image.png)
 *Interactive bounding boxes with confidence-based color coding statistics legend*
 
 

@@ -12,6 +12,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+@app.route("/")
+def index():
+    return "Backend is running"
+
 @app.route('/parse', methods=['POST'])
 def parse_info():
     if 'image' not in request.files:
