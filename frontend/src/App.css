@@ -223,6 +223,126 @@
   margin: 1rem 0;
 }
 
+/* Image with Boxes Component */
+.image-with-boxes {
+  margin-top: 2rem;
+}
+
+.image-analysis-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.image-container {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.annotated-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.confidence-legend {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+}
+
+.confidence-legend h4 {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+.confidence-legend h5 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.legend-item:hover {
+  background: var(--bg-soft);
+}
+
+.color-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.confidence-level {
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.confidence-range {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.legend-stats {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1rem;
+}
+
+.field-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-lighter);
+}
+
+.field-stat:last-child {
+  border-bottom: none;
+}
+
+.field-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.field-confidence {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: right;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .app-container {
@@ -260,5 +380,39 @@
   
   .main-content {
     padding: 1.5rem 1rem;
+  }
+}
+
+/* Responsive Design for Image Analysis */
+@media (max-width: 968px) {
+  .image-analysis-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .confidence-legend {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .legend-item {
+    padding: 0.375rem;
+    gap: 0.5rem;
+  }
+  
+  .confidence-level {
+    min-width: 70px;
+    font-size: 0.875rem;
+  }
+  
+  .field-stat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .field-confidence {
+    text-align: left;
   }
 }

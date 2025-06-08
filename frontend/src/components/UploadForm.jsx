@@ -18,10 +18,8 @@ export default function UploadForm({ onResult, onImage }) {
     if (!file) {
       setError("Please select a file first");
       return;
-    }
-
-    setError(null);
-    onImage(URL.createObjectURL(file)); // Show preview
+    }    setError(null);
+    onImage(URL.createObjectURL(file), file); // Show preview and pass file
     
     try {
       const data = await uploadImage(file);

@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import UploadForm from './components/UploadForm';
 import ExtractedInfo from './components/ExtractedInfo';
+import ImageWithBoxes from './components/ImageWithBoxes';
 import './App.css';
 
 function App() {
   const [result, setResult] = useState(null);
   const [imageURL, setImageURL] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleResult = (data) => {
@@ -13,8 +15,9 @@ function App() {
     setLoading(false);
   };
 
-  const handleImage = (url) => {
+  const handleImage = (url, file) => {
     setImageURL(url);
+    setImageFile(file);
     setLoading(true);
   };
 
@@ -48,6 +51,7 @@ function App() {
         {result && !loading && (
           <section className="results-section">
             <ExtractedInfo data={result} />
+            <ImageWithBoxes imageFile={imageFile} extractedData={result} />
           </section>
         )}
       </div>
