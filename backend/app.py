@@ -1,16 +1,17 @@
+import tempfile
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-import os
 from ocr_utils import process_image, convert_numpy_to_native
 from uuid import uuid4
 
 app = Flask(__name__)
 CORS(app)
-UPLOAD_FOLDER = 'uploads'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+# Use temp directory for Vercel deployment
+UPLOAD_FOLDER = tempfile.gettempdir()
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
 def index():
@@ -39,3 +40,7 @@ def parse_info():
     
 if __name__ == '__main__':
     app.run(debug=True)
+
+# Vercel WSGI handler
+def handler(request, context):
+    return app(request, context)
