@@ -40,7 +40,3 @@ def parse_info():
     
 if __name__ == '__main__':
     app.run(debug=True)
-
-# Vercel WSGI handler
-def handler(request, context):
-    return app(request, context)
