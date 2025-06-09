@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![CNIC Parser Logo](./frontend/src/assets/5265347.png)
+<img src="./frontend/src/assets/5265347.png" alt="CNIC Parser Logo" width="200" height="200" />
 
 **Advanced OCR-powered Pakistani CNIC Information Extraction System**
 
@@ -10,17 +10,17 @@
 [![React](https://img.shields.io/badge/React-18.0+-61DAFB.svg)](https://reactjs.org)
 [![Flask](https://img.shields.io/badge/Flask-2.0+-000000.svg)](https://flask.palletsprojects.com)
 
-[Demo](#demo) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [API](#api) • [Contributing](#contributing)
+[Demo](#demo) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [API](#api)
 
 </div>
 
 ---
 
-## 📖 Introduction
+## Introduction
 
 CNIC Parser is a web application that uses advanced Optical Character Recognition (OCR) technology to automatically extract and digitize information from Pakistani Computerized National Identity Cards (CNIC). The system provides highly accurate text extraction with confidence scoring and visual bounding box annotations.
 
-## 🎯 Motivation
+## Motivation
 
 Manual data entry from identity documents is time-consuming, error-prone and inefficient. This project aims to:
 
@@ -30,7 +30,7 @@ Manual data entry from identity documents is time-consuming, error-prone and ine
 - **Provide** confidence metrics for extracted data reliability
 - **Visualize** extraction accuracy through interactive bounding boxes
 
-## ✨ Features
+## Features
 
 ### 🔍 **Advanced OCR Processing**
 - High-accuracy text extraction using state-of-the-art OCR models
@@ -57,7 +57,7 @@ Manual data entry from identity documents is time-consuming, error-prone and ine
 - No permanent storage of sensitive documents
 - CORS-enabled for secure cross-origin requests
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### **Backend**
 - **Python 3.9+** - Core processing engine
@@ -77,22 +77,22 @@ Manual data entry from identity documents is time-consuming, error-prone and ine
 - **Git** - Version control
 - **npm/pip** - Package management
 
-## 📸 Visuals
+## Visuals
 
 ### Dashboard Overview and Upload Interface
-![Dashboard Screenshot](./docs/dashboard.png)
+![Dashboard Screenshot](./docs/dashboard.PNG)
 *Clean, intuitive interface for CNIC upload, validation and processing*
 
 ### Extraction Results
-![Extraction Results](./docs/extraction_results.png)
+![Extraction Results](./docs/extraction_results.PNG)
 *Detailed information extraction with confidence metrics*
 
 ### Annotated Image Analysis
-![Annotated Image](./docs/annotated_image.png)
+![Annotated Image](./docs/annotated_image.PNG)
 *Interactive bounding boxes with confidence-based color coding statistics legend*
 
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -139,7 +139,7 @@ Manual data entry from identity documents is time-consuming, error-prone and ine
 3. **Access the Application**
    Open your browser and navigate to `http://localhost:5173`
 
-## 📱 Usage
+## Usage
 
 1. **Upload CNIC Image**
    - Click on the upload area or drag and drop your CNIC image
@@ -157,7 +157,7 @@ Manual data entry from identity documents is time-consuming, error-prone and ine
    - Color-coded confidence visualization
    - Detailed field statistics
 
-## 🔌 API Reference
+## API Reference
 
 ### Upload Endpoint
 
@@ -186,7 +186,7 @@ POST /parse
 }
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 cnic-parser/
@@ -207,13 +207,13 @@ cnic-parser/
 ```
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - OCR technology providers for accurate text recognition
 - React and Flask communities for excellent documentation
 - Pakistani government for CNIC format standardization
 
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions:
 
